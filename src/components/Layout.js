@@ -5,7 +5,7 @@ function Layout({ children }) {
   return (
     <div>
       <Navbar />
-      <div style={{ marginTop: "70px" }}>{children}</div>
+      <div style={{ width: "70%", margin: "80px auto" }}>{children}</div>
     </div>
   );
 }

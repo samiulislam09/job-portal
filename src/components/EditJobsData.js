@@ -7,14 +7,14 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
-export default function Editjobs() {
-  const { id } = useParams();
+export default function EditJobsData() {
+  const { id, index } = useParams();
   const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const title = data.get("text");
-    fetch(`http://localhost:5000/updatejobs/${id}`, {
+    fetch(`http://localhost:5000/updatechild/${id}/${index}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -24,10 +24,29 @@ function Navbar() {
             </Link>
           </Typography>
           <Box>
-            {user?.data && (
+            {user?.data ? (
               <Button onClick={logOut} sx={{ color: "#fff" }}>
                 LogOut
               </Button>
+            ) : (
+              <div>
+                <Link
+                  to="/login"
+                  style={{
+                    color: "white",
+                    textDecoration: "none",
+                    marginRight: "20px",
+                  }}
+                >
+                  login
+                </Link>
+                <Link
+                  to="/signup"
+                  style={{ color: "white", textDecoration: "none" }}
+                >
+                  Register
+                </Link>
+              </div>
             )}
           </Box>
         </Toolbar>
